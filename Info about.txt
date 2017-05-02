@@ -1,0 +1,4 @@
+Note:
+
+index.html was the idea of how I wanted to do the "design-view" and implement all the rest but in shop.html is where 
+I implemented and worked with Nodejs and Mongodb and buy.html is where I used a "React" message.
