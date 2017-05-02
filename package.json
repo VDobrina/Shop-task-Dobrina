@@ -1,0 +1,12 @@
+{
+  "name": "shoponline",
+  "version": "2.0.0",
+  "dependencies": {
+    "asserts": "latest",
+    "body-parser": "latest",
+    "express": "latest",
+    "method-override": "latest",
+    "mongodb": "latest",
+    "mongoose": "^4.9.6"
+  }
+}

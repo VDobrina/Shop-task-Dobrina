@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script>
+$(document).ready(function(){
+   $.getJSON("http://localhost:8000/api/products", function(result){
+      $.each(result, function(i, result) {
+      	 var tblRow = "<tr>" + "<td>" + result._id + "</td>" + "<td>" + result.name + "</td>" + "<td>" + result.cost + "</td>"
+      		 + "<td #qty> " + result.qty + "</td>" + "<td #status>" + result.status + "</td>"  + "</tr>"
+            $(tblRow).appendTo("#entrydata tbody");
+                 if (result.qty <3) {
+                       console.log(result.name + " Unavailable");
+                        }
+                });
+           });
+     });
+
+ </script>
+
+</head>
+<body>
+ <h1>Welcome to our shop!</h1>
+
+<div class="wrapper">
+<div class="profile">
+<table id= "entrydata" border="1">
+<thead>
+        <th>ID</th>
+        <th>Name</th> 
+        <th>Cost</th>
+    	  <th id= "qty">Qty</th>
+        <th id= "status">Status</th>  
+
+  </thead>
+  <tbody>
+  </tbody>
+
+  <div id="holi">
+ </div>
+
+</table>
+
+  <button>Add Banana</button>
+
+
+<body>
+
+<button id="myButton" formtarget="_blank" class="checkout" > Buy </button>
+
+<script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        location.href = "http://localhost:8000/buy.html";
+    };
+</script>
+
+   
+
+</body>
+</html>
+
